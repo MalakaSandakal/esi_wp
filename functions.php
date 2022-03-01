@@ -245,4 +245,10 @@ require_once(get_theme_file_path('/inc/page-customizers/home-page-customizer.php
 /*	About Page Customizer  */
 require_once(get_theme_file_path('/inc/page-customizers/about-page-customizer.php'));
 
+/*	Contact Page Customizer  */
+// require_once(get_theme_file_path('/inc/page-customizers/contact-page-customizer.php'));
+
+
+
+
 

@@ -24,29 +24,16 @@
 <hr class="blog-hr">
 
 <div class="blog-post-sec">
-	<div class="row g-5">		
-		<?php if ( have_posts() ) : ?>			
-		<?php while ( have_posts() ) :				
-			the_post();
-			get_template_part( 'template-parts/content', get_post_type() );
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-		</div>
-		<div class="col-4">
-			<img src="images/image 28 (2).png" alt="">
-			<span class="post-date">March 2021</span>
-			<a href="blog-single.html"> <h4 class="blog-post-heading blog-post-heading-col-4">Canadian Solar raises US$150 million towards expanding energy storage presence</h4></a>
-		   
-			<p class="post-description p-d">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-		</div>
+	<div class="row g-5">	
+		<?php if(have_posts()): while(have_posts()): the_post();?>
+			<div class="col-4">
+				<img src="<?php echo the_post_thumbnail_url()?>" alt="">
+				<span class="post-date"><?php the_date()?></span>
+				<a href="<?php echo get_permalink()?>"> <h4 class="blog-post-heading blog-post-heading-col-4"><?php the_title()?></h4></a>	   
+				<?php the_excerpt()?>
+			</div>			
+		<?php endwhile; else: endif;?>		
+		
 		<div class="col-4">
 			<img src="images/image 28 (3).png" alt="">
 			<span class="post-date">March 2021</span>

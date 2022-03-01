@@ -12,7 +12,7 @@
     new \Kirki\Section(
         'We_Are_ES',
         [
-            'title'       => esc_html__( 'We Are Energy Security', 'kirki' ),
+            'title'       => esc_html__( 'We Are Energy Security Section', 'kirki' ),
             'panel'       => 'About_Page_Panel',
             'priority'    => 100,
         ]
@@ -77,7 +77,7 @@
     new \Kirki\Field\Image(
         [
             'settings'    => 'founder_image',
-            'label'       => esc_html__( 'Founder Image', 'kirki' ),
+            'label'       => esc_html__( "Founder's Image", 'kirki' ),
             'section'     => 'Mission_Vision_Section',
             'default'     => '',
         ]
@@ -129,9 +129,9 @@
             'button_label' => esc_html__( 'Add New Member ', 'kirki' ),
             'default'      => [
                 [
-                    'member_image'   => esc_html__( 'Kirki Site', 'kirki' ),
-                    'member_name'    => 'https://kirki.org/',
-                    'member_rank'    => 'https://kirki.org/',
+                    'member_image'   => 'http://localhost/wordpress/wp-content/uploads/2022/02/21104.png',
+                    'member_name'    => 'E-Team Member',
+                    'member_rank'    => "E-Team Member's Rank",
                 ],
             ],
             'fields'       => [
@@ -171,14 +171,14 @@
             'row_label'    => [
                 'type'  => 'field',
                 'value' => esc_html__( 'Your Custom Value', 'kirki' ),
-                'field' => 'member_name',
+                'field' => 'esi_support_member_name',
             ],
             'button_label' => esc_html__( 'Add New Member ', 'kirki' ),
             'default'      => [
                 [
-                    'esi_support_member_image'   => esc_html__( 'Kirki Site', 'kirki' ),
-                    'esi_support_member_name'    => 'https://kirki.org/',
-                    'esi_support_member_rank'    => 'https://kirki.org/',
+                    'esi_support_member_image'   => 'http://localhost/wordpress/wp-content/uploads/2022/02/21104.png',
+                    'esi_support_member_name'    => 'Esi Support Member',
+                    'esi_support_member_rank'    => "Esi Support Member's Rank",
                 ],
             ],
             'fields'       => [

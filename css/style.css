@@ -1185,6 +1185,8 @@ video {
 }
 .founder-about-man-det{
     margin-left: 23px;
+    display: flex;
+    align-items: center;
 }
 .about-dark-text-sec{
     padding-right: 20px;
@@ -1737,8 +1739,8 @@ h3.service-desc-sec-head{
     left: 0;
 }
 .owl-carousel-home-partners{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
     margin-top: 60px;
 }
 .owl-carousel-home-partners .owl-nav .owl-prev span,.owl-carousel-home-partners .owl-nav .owl-next span{
@@ -1759,10 +1761,10 @@ h3.service-desc-sec-head{
     z-index: 888888;
 }
 .owl-carousel-home-partners .owl-item{
-    margin-right: 30px !important;
+    margin-right: 20px !important;
 }
 .owl-carousel-home-partners .owl-stage{
-    width: 238% !important;
+    width: 169% !important;
 }
 .partners-sec{
     padding-bottom: 75px;
@@ -2111,6 +2113,7 @@ h3.blog-sub-head{
 .blog-post-sec img{
     border-radius: 5px;
     width: 100%;
+    height: 250px;
 }
 .blog-post-sec .col-4{
     margin-top: 60px !important;
@@ -2477,7 +2480,7 @@ h3.contact-main-heading{
 .single-blog-container .blog-description{
     margin-top: 45px;
 }
-.single-blog-container .blog-main-img{
+.single-blog-container .post-thumbnail{
     margin-top: 45px;
 }
 .single-blog-container .comments-section{
@@ -2535,9 +2538,13 @@ h3.contact-main-heading{
     letter-spacing: 0.055em;
     color: #ADADAD;
 }
-.single-blog-container .old-comments-sec .single-comment .acc-det .propic{
-    width: 35px;
+footer.comment-meta .pro-pic{
+    display: flex;
+    align-items: center;
+}
+footer.comment-meta .pro-pic img{
     height: 35px;
+    width: 35px;
 }
 .single-blog-container .old-comments-sec .single-comment .acc-det .pro-det{
     margin-left: 20px;
@@ -2863,6 +2870,9 @@ footer.comment-meta{
     color: #737373;
     margin-bottom: 0px;
 }
+.comment-metadata {
+    margin-top: -5px;
+}
 .comment-metadata time{
     font-family: 'Roboto';
     font-size: 10px;
@@ -2878,6 +2888,24 @@ footer.comment-meta{
     padding-bottom: 15px;
     margin-top: 20px;
 }
+li.comment{
+    list-style: none;
+}
+ul.children .pro-pic{
+    width: 10%;
+}
+ul.children .comment-author{
+    width: 25%;
+}
+ul.children .comment-awaiting-moderation{
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    color: #484848;
+}
+
 .comment-content p{
     font-family: 'Lato';
     font-weight: 500;
@@ -2912,6 +2940,85 @@ footer.comment-meta{
     color: #FFFFFF;
     margin-top: 35px;
 }
+.blog-post-sec .col-4 p{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+}
+.comment-form label{
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.055em;
+    color: #000000;
+}
+.comment-form-comment{
+    margin-bottom: 10px;
+}
+.comment-form-email{
+    margin-top: 10px;
+}
+textarea#comment, input#author, input#email{
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.055em;
+    color: #000000;
+}
+footer.comment-meta{
+    display: inline-flex;
+}
+.comment-author{
+    margin-left: 20px;
+}
+ul.contact-main-ul,ul.contact-main-social-ul{
+    margin-left: 0px;
+}
+.dark-back .container{
+    padding-bottom: 65px;
+}
+.nav-tabs{
+    margin-left: 0px;
+}
+#mailpoet_form_1 form.mailpoet_form{
+    padding: 0px !important;
+}
+input.mailpoet_text{
+    border: 1px solid #31C46C;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+    padding-left: 10px !important;
+}
+.mailpoet_text::placeholder{
+    margin-right: 70px !important;
+}
+.mailpoet_paragraph{
+    position: relative;
+}
+.mailpoet_form{
+    margin-top: 25px;
+}
+.mailpoet_submit{
+    background: #253745 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-family: 'Lato';
+    font-weight: bold !important;
+    letter-spacing: 0.055em !important;
+    text-transform: capitalize !important;
+    font-size: 20px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+    margin-top: 25px !important;
+}
+.mailpoet_paragraph.last{
+    width: fit-content !important;
+    float: right !important;
+}
 @media(max-width:1750px){
     .home-main-h5{
         padding-bottom: 90px;
@@ -2924,6 +3031,7 @@ footer.comment-meta{
     }
     .carousel-item-cr-1 img {
         width: 115% !important;
+        max-width: 115% !important;
     }
     .carousel-indicators-home {
         top: 500px;
@@ -3005,6 +3113,7 @@ footer.comment-meta{
     }
     .carousel-item-cr-1 img{
         width: 135% !important;
+        max-width: 135% !important;
     }
     .carousel-indicators-home {
         top: 450px;
@@ -3179,6 +3288,7 @@ footer.comment-meta{
     }
     .carousel-item-cr-1 img{
         width: 140% !important;
+        max-width: 140% !important;
     }
     .right-sec h2 {
         font-size: 62px;
@@ -3529,6 +3639,7 @@ footer.comment-meta{
     }
     .carousel-item-cr-1 img{
         width: 200% !important;
+        max-width: 200% !important;
     }
     .home-main-h5 {
         padding-bottom: 60px;
@@ -4265,6 +4376,7 @@ footer.comment-meta{
     }
     .carousel-item-cr-1 img {
         width: 230% !important;
+        max-width: 230% !important;
     }
     .col-6-left{
         width: 100%;
@@ -4468,5 +4580,100 @@ footer.comment-meta{
     }
     .faq-container .accordion-body {
         font-size: 15px;
+    }
+    .top-bar-li{
+        margin-right: 10px;
+    }
+}
+@media(max-width:480px){
+    .top-bar-icon{
+        margin-right: 5px;
+        font-size: 11px;
+    }
+    .home-second-sec .col-md-3 {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .carousel-2 img {
+        max-width: 100%;
+    }
+    .col-6-right {
+        max-width: 380px;
+    }
+    .os-btn {
+        font-size: 14px;
+    }
+    .testomonials-card-row .col-4 {
+        width: 100%;
+    }
+    .customer-testimonial-sec .testomonials-card-row .item-test .card-owl .person-sec .avatar-sec {
+        float: right;
+    }
+    .person-name-home {
+        margin-left: 0px;
+    }
+    .customer-testimonial-sec .testomonials-card-row .item-test .person-details-sec {
+        display: flex;
+        align-items: center;
+    }
+    .news-row .col-md-4 {
+        width: 100%;
+        margin-top: 30px !important;
+    }
+    .col-md-5.contact-container-main form {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .blog-post-sec .col-4 {
+        width: 100%;
+    }
+    .top-bar .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .single-blog-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .single-blog-container h2.blog-title {
+        font-size: 40px;
+        line-height: 43px;
+        letter-spacing: 0.015em;
+    }
+    .cr-1-det-sec {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cr-1-img-sec,.cr-2-img-sec {
+        height: 215px;
+    }
+    .owl-cr-1 .owl-nav button.owl-prev, .owl-cr-2 .owl-nav button.owl-prev,.owl-cr-1 .owl-nav button.owl-next, .owl-cr-2 .owl-nav button.owl-next{
+        display: none;
+    }
+    .cr-2-man-title {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .cr-2-det-sec{
+        padding-top: 20px;
+        padding-bottom: 35px;
+    }
+    .about-support-team-h2{
+        line-height: 50px;
+    }
+    .cr-1-img-sec, .cr-2-img-sec {
+        height: 400px;
+    }
+    .cr-1-img-sec img {
+        width: 60% !important;
+    }
+    .owl-cr-2 .owl-item img {
+        width: 60%;
+    }
+    .carousel-item-cr-1 img {
+        width: 300% !important;
+        max-width: 300% !important;
     }
 }

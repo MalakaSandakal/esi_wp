@@ -13,7 +13,7 @@
                             </h1>
                             <h5 class="home-main-h5"> <?php echo get_theme_mod('slider_sub_heading_1')?> </h5>
                             <div class="col-md-8">
-                                <button class="btn play-btn-main-cr">
+                                <button class="btn play-btn-main-cr" data-bs-toggle="modal" data-bs-target="#vid-area">
                                     <div class="play-btn-icon">
                                         <i class="fas fa-play"></i>
                                     </div>
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>       
                 <img src="<?php echo get_theme_mod('slider_image_1')?>" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item carousel-item-cr-1">
@@ -121,6 +121,23 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+            
+    <!-- Modal -->
+    <div class="modal fade" id="vid-area" tabindex="-1" aria-labelledby="vid-area-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video width="320" height="240" controls>
+                    <source src="http://localhost/wordpress/wp-content/uploads/2022/03/Marazzo-Drone-Footage-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            </div>
+        </div>
+    </div> 
 </section>
 <section class="home-second-sec">
     <div class="container">
@@ -276,10 +293,10 @@
                         <div class="col-md-6 cr2-indicators-half">
                             <div class="c2-btn-sec">
                                 <div class="carousel-indicators carousel-2-indicators partners-carousal-indicator-sec">
-                                    <button type="button" class="cr-2-ind-btn active" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                                    <!-- <button type="button" class="cr-2-ind-btn active" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
                                     <button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                    <button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
                                 </div>
                             </div>
                             <img src="<?php echo get_template_directory_uri().'/images/Line 31.png' ?>" class="line-img" alt="">
@@ -576,18 +593,21 @@
             <h2>Latest Industry <span style="color: #999999;">Updates</span>
             </h2>
             <p class="home-com subscribe-text"><?php echo get_theme_mod('subscribe_description')?></p>
-            <form class="subscribe-form">
+            <?php echo do_shortcode("[mailpoet_form id='1']"); ?>
+            <!-- <form class="subscribe-form">                
                 <div class="input-group mb-3 sub-input-group">
                     <input type="email" class="form-control sub-input" placeholder="Your Email Address Here"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
                     <i class="fas fa-envelope input-envelope"></i>
                 </div>
                 <button type="submit" class="btn subscribe-btn">Subscribe Now</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </div>
 </div>
+	
+
 
 
 <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

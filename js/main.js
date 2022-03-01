@@ -163,13 +163,15 @@ var partners_carousal_indicator_sec = document.querySelector('.partners-carousal
 var partners_carousal_indicator_sec_buttons = document.querySelectorAll('.cr-2-ind-btn');
 
 $(document).ready(function(){
+
   for(let i=0;i<products_items.length;i++){
     products_items[0].classList.add('active');
-    // partners_carousal_indicator_sec.innerHTML += `<button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to="${i}" aria-label="Slide ${i}"></button>`;
   };
-  console.log(df);
+
   var comment_submit_btn = document.querySelector('.comment-form p.form-submit input.submit');
   comment_submit_btn.value = "Submit";
+
+
 });
 
 $('.about-page-carousal').owlCarousel({
@@ -178,7 +180,7 @@ $('.about-page-carousal').owlCarousel({
   nav:true,
   responsive:{
       0:{
-          items:2
+          items:1
       },
       600:{
           items:2
@@ -196,6 +198,84 @@ right_btn.html('<i class="fas fa-chevron-right"></i>');
 left_btn.html('<i class="fas fa-chevron-left"></i>');
 
 
+var cont_height = $('.blog-top').height();
+var cont_button = $('.fixed-right');
+var wind_height = $(window).height();
+cont_button.css({
+    "margin-top": cont_height/2, 
+});
+var width = $(window).width();
+if(width>=767){
+  var mh = 0; 
+  
+  $(".blog-post-heading-col-4").each(function() {
+
+  if (mh < $(this).height()) {
+    mh = $(this).height();
+    }
+
+  });
+  $(".blog-post-heading-col-4").height(mh);
+}  
 
 
+var faq_accordion =document.querySelectorAll('.faq-accordions .accordion-item .accordion-collapse');
+var faq_accordion_button =document.querySelectorAll('.faq-accordions .accordion-item h2 button');
+var faq_accordion_collapse =document.querySelectorAll('.faq-accordions .accordion-item .accordion-collapse');
 
+for(let x=0;x<faq_accordion.length;x++){
+  if(faq_accordion[0]){
+    faq_accordion[0].classList.add('show');   
+  }
+  faq_accordion_button[x].setAttribute("aria-expanded", 'false');
+  faq_accordion_button[x].classList.add("collapsed");
+  if(faq_accordion_button[0]){
+    faq_accordion_button[0].setAttribute("aria-expanded", 'true');
+    faq_accordion_button[0].classList.remove("collapsed");
+  }
+  faq_accordion_button[x].setAttribute("data-bs-target", `#collapse-${x}`);
+  faq_accordion_collapse[x].setAttribute("id", `collapse-${x}`);
+}
+
+function create_indicators(){
+  var a= 0;
+  do{
+    a+=1;
+    partners_carousal_indicator_sec.innerHTML += `<button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to=${a-1} aria-label="Slide ${a-1}"></button>`;
+  }while(a<products_items.length);
+  setTimeout(options__, 1000)
+}
+function options__(){
+  var cr_2 = $('.cr-2-ind-btn');
+  for(let q=0;q<cr_2.length;q++){
+    if(cr_2[0]){
+      cr_2[0].classList.add('active');
+    }
+  }
+}
+setTimeout(create_indicators, 1000);
+
+
+var mailpoet_text = document.querySelector('.mailpoet_text');
+mailpoet_text.placeholder = 'Your Email Address Here';
+
+$('.mailpoet_paragraph').append('<i class="fas fa-envelope input-envelope"></i>');
+
+
+var enve_icon = document.querySelectorAll('.mailpoet_form .mailpoet_paragraph .fa-envelope');
+for(let ei = 0; ei< enve_icon.length; ei++){
+  enve_icon[1].style.display = "none";
+}
+
+var wid = document.querySelectorAll('.owl-carousel-home-partners .owl-stage-outer .owl-item');
+for(let ww = 0; ww < wid.length;ww++){
+    wid[ww].style.max_width = 300;
+}
+
+// var mailpoet_text = document.querySelector('.mailpoet_text');
+
+// if(mailpoet_text.value == null|| mailpoet_text.value == ""){
+//   console.log('empty');
+// }else{
+//   console.log('filed');
+// }

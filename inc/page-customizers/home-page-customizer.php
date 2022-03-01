@@ -321,10 +321,10 @@
     new \Kirki\Section(
         'Main_Slider_Section',
         [
-            'title'       => esc_html__( 'Main_Slider_Section', 'kirki' ),
-            'description' => esc_html__( 'Main_Slider_Section.', 'kirki' ),
+            'title'       => esc_html__( 'Homepage Main Carousal', 'kirki' ),
+            'description' => esc_html__( 'Homepage Main Carousal.', 'kirki' ),
             'panel'       => 'Homepage_Panel',
-            'priority'    => 760,
+            'priority'    => 7,
         ]
     );
     new \Kirki\Field\Image(
@@ -613,13 +613,31 @@
     // end : Products Section
 
     // begin : custom Section
-    new \Kirki\Section(
-        'custom_section',
+    new \Kirki\Field\Repeater(
         [
-            'title'       => esc_html__( 'custom Section', 'kirki' ),
-            'description' => esc_html__( 'custom Section.', 'kirki' ),
-            'panel'       => 'Homepage_Panel',
-            'priority'    => 165,
+            'settings'     => 'repeater_setting_2',
+            'label'        => esc_html__( 'Repeater Control', 'kirki' ),
+            'section'      => 'Main_Slider_Section',
+            'priority'     => 900,
+            'row_label'    => [
+                'type'  => 'field',
+                'value' => esc_html__( 'Your Custom Value', 'kirki' ),
+                'field' => 'link_text',
+            ],
+            'button_label' => esc_html__( '"Add new" button label (optional) ', 'kirki' ),
+            'default'      => [
+                [
+                    'video_url'   => 'https://kirki.org/',
+                ],
+            ],
+            'fields'       => [
+                'video_url'   => [
+                    'type'        => 'url',
+                    'label'       => esc_html__( 'Link Text', 'kirki' ),
+                    'description' => esc_html__( 'Description', 'kirki' ),
+                    'default'     => '',
+                ],
+            ],
         ]
     );
     

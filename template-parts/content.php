@@ -15,16 +15,18 @@
         <div class="container">
             <div class="single-blog-container">
               <div class="blog-top">
-			  	<span class="blog-post-date"><?php energy_security_posted_on();?></span>
-                <h2 class="blog-title">
+			  	<span class="blog-post-date"><?php the_date();?></span>
 			  	<?php			  	
 					if ( is_singular() ) :
-						the_title( '<h1 class="entry-title">', '</h1>' );
+						the_title( '<h2 class="blog-title">', '</h2>' );
 					else :
-						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+						the_title( '<h2 class="blog-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 					endif;
-				?></h2>
-				<?php energy_security_post_thumbnail(); ?>
+				?>
+				<div class="blog-thumbnail">
+					<?php energy_security_post_thumbnail(); ?>
+				</div>
+				<div class="blog-description">
 				<?php
 					the_content(
 						sprintf(
@@ -47,6 +49,8 @@
 						)
 					);
 				?>
+				</div>
+				
               </div> 
 			  <?php 
 			 	comments_template(); 

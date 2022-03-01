@@ -55,8 +55,10 @@
                             <div class="founder-about-man">
                                 <img src="<?php echo get_theme_mod('founder_image')?>" class="founder-about-man-img" alt="">
                                 <div class="founder-about-man-det">
-                                    <h3 class="founder-about-man-h2"><?php echo get_theme_mod('founder_name')?></h3>
-                                    <p class="founder-about-man-p"><?php echo get_theme_mod('founder_rank')?></p>
+                                    <div class="div-100">
+                                        <h3 class="founder-about-man-h2"><?php echo get_theme_mod('founder_name')?></h3>
+                                        <p class="founder-about-man-p"><?php echo get_theme_mod('founder_rank')?></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -77,9 +79,9 @@
 				<?php
 					$defaults = [
 						[
-							'member_image'   => esc_html__( 'Kirki Site', 'kirki' ),
-							'member_name'    => 'https://kirki.org/',
-							'member_rank'    => 'https://kirki.org/',
+							'member_image'   => 'http://localhost/wordpress/wp-content/uploads/2022/02/21104.png',
+                            'member_name'    => 'E-Team Member',
+                            'member_rank'    => "E-Team Member's Rank",
 						],
 					];
 					$e_team_settings = get_theme_mod( 'meet_the_e_team_carousal', $defaults );
@@ -111,9 +113,9 @@
 						<?php
 							$defaults = [
 								[
-									'esi_support_member_image'   => esc_html__( 'Kirki Site', 'kirki' ),
-									'esi_support_member_name'    => 'https://kirki.org/',
-									'esi_support_member_rank'    => 'https://kirki.org/',
+									'esi_support_member_image'   => 'http://localhost/wordpress/wp-content/uploads/2022/02/21104.png',
+                                    'esi_support_member_name'    => 'Esi Support Member',
+                                    'esi_support_member_rank'    => "Esi Support Member's Rank",
 								],
 							];
 							$esi_support_settings = get_theme_mod( 'esi_support_team_carousal', $defaults );
