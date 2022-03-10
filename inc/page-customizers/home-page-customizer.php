@@ -4,7 +4,7 @@
     new \Kirki\Panel(
         'Homepage_Panel',
         [
-            'priority'    => 1000,
+            'priority'    => 1300,
             'title'       => esc_html__( 'Homepage', 'kirki' ),
             'description' => esc_html__( 'Homepage Sections.', 'kirki' ),
         ]
@@ -96,7 +96,6 @@
         [
             'settings'    => 'what_we_do_section_image',
             'label'       => esc_html__( 'What We Do Image', 'kirki' ),
-            'description' => esc_html__( 'The saved value will be the URL.', 'kirki' ),
             'section'     => 'What_We_Do_Section',
             'default'     => '',
         ]
@@ -157,6 +156,15 @@
             'default'     => esc_html__( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,', 'kirki' ),
         ]
     );
+    new \Kirki\Field\URL(
+        [
+            'settings'    => 'news_read_more_url',
+            'label'       => esc_html__( 'Read More Link', 'kirki' ),
+            'section'     => 'News_&_Blog_Section',
+            'default'     => '#',
+        ]
+    );
+
     new \Kirki\Field\Repeater(
         [
             'settings'     => 'news_&_blog_settings',
@@ -172,7 +180,7 @@
             'default'      => [
                 [
                     'news_title'   => esc_html__( 'Kirki Site', 'kirki' ),
-                    'news_background'    => 'https://kirki.org/',
+                    'news_background'    => '#',
                 ],
             ],
             'fields'       => [
@@ -184,7 +192,7 @@
                 'news_background'    => [
                     'type'        => 'image',
                     'label'       => esc_html__( 'Background Image', 'kirki' ),
-                    'default'     => '',
+                    'default'     => '#',
                 ],
             ],
         ]
@@ -198,7 +206,7 @@
             'title'       => esc_html__( 'Customer Testimonials Section', 'kirki' ),
             'description' => esc_html__( 'Customer Testimonials Section.', 'kirki' ),
             'panel'       => 'Homepage_Panel',
-            'priority'    => 200,
+            'priority'    => 140,
         ]
     );
     new \Kirki\Field\Textarea(
@@ -227,13 +235,28 @@
                     'profile_image'   => esc_html__( 'Kirki Site', 'kirki' ), 
                     'customer_name'   => esc_html__( 'Kirki Site', 'kirki' ),                      
                     'customer_feeling'   => esc_html__( 'Kirki Site', 'kirki' ),  
-                    'customer_comment'   => esc_html__( 'Kirki Site', 'kirki' ),     
+                    'customer_comment'   => esc_html__( 'Kirki Site', 'kirki' ),                      
                 ],
             ],
             'fields'       => [
                 'preview_image'   => [
                     'type'        => 'image',
                     'label'       => esc_html__( 'Preview Image', 'kirki' ),
+                    'default'     => '',
+                ],
+                'slider_img_1'   => [
+                    'type'        => 'image',
+                    'label'       => esc_html__( 'Slider Image 1', 'kirki' ),
+                    'default'     => '',
+                ],
+                'slider_img_2'   => [
+                    'type'        => 'image',
+                    'label'       => esc_html__( 'Slider Image 2', 'kirki' ),
+                    'default'     => '',
+                ],
+                'slider_img_3'   => [
+                    'type'        => 'image',
+                    'label'       => esc_html__( 'Slider Image 3', 'kirki' ),
                     'default'     => '',
                 ],
                 'profile_image'   => [
@@ -251,8 +274,24 @@
                     'label'       => esc_html__( "Customer's Idea", 'kirki' ),
                     'default'     => '',
                 ],
-                'customer_comment'   => [
+                'project_scope_list_1'   => [
                     'type'        => 'text',
+                    'label'       => esc_html__( "Project Scope List 1", 'kirki' ),
+                    'default'     => '',
+                ],
+                'project_scope_list_2'   => [
+                    'type'        => 'text',
+                    'label'       => esc_html__( "Project Scope List 2", 'kirki' ),
+                    'default'     => '',
+                ],
+                'project_scope_list_3'   => [
+                    'type'        => 'text',
+                    'label'       => esc_html__( "Project Scope List 3", 'kirki' ),
+                    'default'     => '',
+                ],
+
+                'customer_comment'   => [
+                    'type'        => 'textarea',
                     'label'       => esc_html__( "Customer's Comment", 'kirki' ),
                     'default'     => '',
                 ],
@@ -268,7 +307,7 @@
             'title'       => esc_html__( 'Partners Section', 'kirki' ),
             'description' => esc_html__( 'Partners Section.', 'kirki' ),
             'panel'       => 'Homepage_Panel',
-            'priority'    => 260,
+            'priority'    => 150,
         ]
     );
 
@@ -331,6 +370,7 @@
         [
             'settings'    => 'slider_image_1',
             'label'       => esc_html__( 'Slider Image 1', 'kirki' ),
+            'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
         ]
@@ -359,7 +399,7 @@
             'label'    => esc_html__( 'Secondary Box Heading 1', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
-            'priority' => 12,
+            'priority' => 13,
         ]
     );
     new \Kirki\Field\Textarea(
@@ -377,6 +417,7 @@
         [
             'settings'    => 'slider_image_2',
             'label'       => esc_html__( 'Slider Image 2', 'kirki' ),
+            'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
             'priority' => 19,
@@ -424,6 +465,7 @@
         [
             'settings'    => 'slider_image_3',
             'label'       => esc_html__( 'Slider Image 3', 'kirki' ),
+            'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
             'priority' => 29,
@@ -470,6 +512,7 @@
         [
             'settings'    => 'slider_image_4',
             'label'       => esc_html__( 'Slider Image 4', 'kirki' ),
+            'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
             'priority' => 39,
@@ -510,6 +553,25 @@
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 43,
         ]
+    );    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'ask_a_pro_link',
+            'label'    => esc_html__( 'Ask A Pro Link', 'kirki' ),
+            'section'  => 'Main_Slider_Section',
+            'default'  => esc_html__( 'This is a default value', 'kirki' ),
+            'priority' => 45,
+        ]
+    );
+    new \Kirki\Field\URL(
+        [
+            'settings' => 'carousal_video',
+            'label'    => esc_html__( 'Video url', 'kirki' ),
+            'description' => 'Upload your video to media library and paste the link here',
+            'section'  => 'Main_Slider_Section',
+            'default'  => 'http://localhost/wordpress/wp-content/uploads/2022/03/Marazzo-Drone-Footage-1.mp4',
+            'priority' => 50,
+        ]
     );
     // end : Main Carousal 
 
@@ -520,7 +582,7 @@
             'title'       => esc_html__( 'Subscribe Section', 'kirki' ),
             'description' => esc_html__( 'Subscribe Section.', 'kirki' ),
             'panel'       => 'Homepage_Panel',
-            'priority'    => 135,
+            'priority'    => 200,
         ]
     );
 
@@ -541,7 +603,7 @@
             'title'       => esc_html__( 'Products Section', 'kirki' ),
             'description' => esc_html__( 'Products Section.', 'kirki' ),
             'panel'       => 'Homepage_Panel',
-            'priority'    => 135,
+            'priority'    => 120,
         ]
     );
 
@@ -559,88 +621,76 @@
             'button_label' => esc_html__( 'Add new product details ', 'kirki' ),
             'default'      => [
                 [
-                    'product_image'              => 'https://kirki.org/',
+                    'product_image'              => '#',
                     'product_title'              => esc_html__( 'Kirki Site', 'kirki' ),
                     'product_description'        => esc_html__( 'Kirki Site', 'kirki' ),
-                    'how_it_works_url'           =>'https://kirki.org/',
-                    'read_more_url'              =>'https://kirki.org/',
-                    'product_specifications_url' => 'https://kirki.org/',
-                    'ask_a_pro_url'              => 'https://kirki.org/',                        
+                    'how_it_works_url'           =>'#',
+                    'read_more_url'              =>'#',
+                    'product_specifications_url' => '#',
+                    'ask_a_pro_url'              => '#',                        
                 ],
             ],
             'fields'       => [
                 'product_image'   => [
                     'type'        => 'image',
-                    'label'       => esc_html__( 'Product image', 'kirki' ),
-                    'default'     => '',
+                    'label'       => esc_html__( 'Image', 'kirki' ),
+                    'default'     => '#',
                 ],
                 'product_title'   => [
                     'type'        => 'textarea',
-                    'label'       => esc_html__( 'Product Name', 'kirki' ),
-                    'default'     => '',
+                    'label'       => esc_html__( 'Title', 'kirki' ),
+                    'default'     => '#',
                 ],
                 'product_description'   => [
                     'type'        => 'textarea',
-                    'label'       => esc_html__( 'Product Description', 'kirki' ),
-                    'default'     => '',
+                    'label'       => esc_html__( 'Description', 'kirki' ),
+                    'default'     => '#',
+                ],
+                'how_it_works_btn_control'   => [
+                    'type'        => 'checkbox',
+                    'label'       => esc_html__( 'Enable How It Works button', 'kirki' ),
+                    'default'     => 'true',
                 ],
                 'how_it_works_url'   => [
                     'type'        => 'url',
                     'label'       => esc_html__( 'How it works link', 'kirki' ),
-                    'default'     => '',
+                    'default'     => '#',
+                ],
+                'read_more_btn_control'   => [
+                    'type'        => 'checkbox',
+                    'label'       => esc_html__( 'Enable Readmore button', 'kirki' ),
+                    'default'     => 'true',
                 ],
                 'read_more_url'   => [
                     'type'        => 'url',
                     'label'       => esc_html__( 'Readmore link', 'kirki' ),
-                    'default'     => '',
+                    'default'     => '#',
                 ],
-                
+                'product_specification_btn_control'   => [
+                    'type'        => 'checkbox',
+                    'label'       => esc_html__( 'Enable Product Specification button', 'kirki' ),
+                    'default'     => 'true',
+                ],
                 'product_specifications_url'   => [
                     'type'        => 'url',
                     'label'       => esc_html__( ' Product specifications link', 'kirki' ),
-                    'default'     => '',
+                    'default'     => '#',
                     'priority'    => 300,
+                ],
+                'ask_a_pro_btn_control'   => [
+                    'type'        => 'checkbox',
+                    'label'       => esc_html__( 'Enable Ask A Pro button', 'kirki' ),
+                    'default'     => 'true',
                 ],
                 'ask_a_pro_url'   => [
                     'type'        => 'url',
                     'label'       => esc_html__( ' Ask a pro link', 'kirki' ),
-                    'default'     => '',
+                    'default'     => '#',
                     'priority'    => 350,
                 ],
             ],
         ]
     );
     // end : Products Section
-
-    // begin : custom Section
-    new \Kirki\Field\Repeater(
-        [
-            'settings'     => 'repeater_setting_2',
-            'label'        => esc_html__( 'Repeater Control', 'kirki' ),
-            'section'      => 'Main_Slider_Section',
-            'priority'     => 900,
-            'row_label'    => [
-                'type'  => 'field',
-                'value' => esc_html__( 'Your Custom Value', 'kirki' ),
-                'field' => 'link_text',
-            ],
-            'button_label' => esc_html__( '"Add new" button label (optional) ', 'kirki' ),
-            'default'      => [
-                [
-                    'video_url'   => 'https://kirki.org/',
-                ],
-            ],
-            'fields'       => [
-                'video_url'   => [
-                    'type'        => 'url',
-                    'label'       => esc_html__( 'Link Text', 'kirki' ),
-                    'description' => esc_html__( 'Description', 'kirki' ),
-                    'default'     => '',
-                ],
-            ],
-        ]
-    );
-    
-    // end : Custom Section
     
 ?>

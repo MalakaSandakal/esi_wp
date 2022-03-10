@@ -39,7 +39,8 @@
                 </ul>
             </div>
             <div class="col-md-5 contact-container-main">
-                <form action="">
+                <?php echo do_shortcode("[contact-form-7 id='231' title='Contact form 1']"); ?>
+                <!-- <form action="">
                     <div class="mb-4">
                         <label for="exampleInputEmail1" class="form-label">First Name</label>
                         <input type="text" class="form-control" id="" aria-describedby="">
@@ -59,7 +60,7 @@
                     <div class="mt-4">
                         <button class="btn">SUBMIT</button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </div>
@@ -91,12 +92,13 @@
         <p><?php echo get_theme_mod('faq_description')?></p>        
       </div>
       <div class="col-md-12">
+        <h3>General FAQs</h3>
         <div class="accordion faq-accordions" id="accordionExample">
           <?php
             $defaults = [
               [
-                'question'   => esc_html__( 'Kirki Site', 'kirki' ),
-                'answer'   => esc_html__( 'Kirki Site', 'kirki' )
+                'question'   => null,
+                'answer'   => null
               ],
             ];
             $faq_list_settings = get_theme_mod( 'faq_list', $defaults );
@@ -111,6 +113,32 @@
             <div id="" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <?php echo $faq_list_setting['answer']?>
+              </div>
+            </div>
+          </div>
+					<?php endforeach; ?>          
+        </div>
+        <h3>Questions you should be asking</h3>
+        <div class="accordion faq-accordions faq-accordions-new" id="accordionExample2">
+          <?php
+            $defaults = [
+              [
+                'question'   => null,
+                'answer'   => null
+              ],
+            ];
+            $faq_list_2_settings = get_theme_mod( 'faq_list_2', $defaults );
+          ?>
+          <?php foreach ( $faq_list_2_settings as $faq_list_2_setting ) : ?>
+						<div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="" aria-expanded="" aria-controls="collapseTwo">
+                <?php echo $faq_list_2_setting['question']?>
+              </button>
+            </h2>
+            <div id="" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+              <div class="accordion-body">
+                <?php echo $faq_list_2_setting['answer']?>
               </div>
             </div>
           </div>

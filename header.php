@@ -38,9 +38,6 @@
               <li class="top-bar-li">
                 <i class="fas fa-envelope top-bar-icon"></i><?php echo get_theme_mod('contact_mail')?>
               </li>
-              <li class="top-bar-li">
-                <i class="far fa-clock top-bar-icon"></i><?php echo get_theme_mod('working_time')?>
-              </li>
             </ul>
           </div>
           <div class="top-social">

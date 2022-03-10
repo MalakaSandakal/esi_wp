@@ -34,14 +34,6 @@
             'default'     => esc_html__( 'This is a default value', 'kirki' ),
         ]
     );
-    new \Kirki\Field\Textarea(
-        [
-            'settings'    => 'working_time',
-            'label'       => esc_html__( 'Working Hours (From To)', 'kirki' ),
-            'section'     => 'Contact_Details_Section',
-            'default'     => esc_html__( 'This is a default value', 'kirki' ),
-        ]
-    );
     
 
     new \Kirki\Section(

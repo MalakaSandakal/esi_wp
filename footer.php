@@ -16,8 +16,8 @@
           <div class="footer-section">
             <div class="row footer-list-row">
               <div class="col-md-4">
-                <img src="http://esinetsolinfo.045d37c.netsolhost.com/esweb_html/images/footer-logo.png" class="footer-logo-img" alt="">
-                <p class="footer-main-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                <img src="<?php echo get_theme_mod('footer-logo') ?>" class="footer-logo-img" alt="">
+                <p class="footer-main-text"> <?php echo get_theme_mod('footer-description')?> </p>
               </div>
               <div class="col-md-8">
                 <div class="row">
@@ -27,11 +27,18 @@
                         <hr class="footer-head-bottom">
                       </h6>
                       <ul class="footer-ul">
-                        <li class="footer-ul-li"><a href="">Home</a></li>
-                        <li class="footer-ul-li"><a href="">Service</a></li>
-                        <li class="footer-ul-li"><a href="">Careers</a></li>
-                        <li class="footer-ul-li"><a href="">About Us</a></li>
-                        <li class="footer-ul-li"><a href="">Contact Us</a></li>
+                      <?php
+                        $defaults = [
+                          [
+                            'page'         => '',
+                            'page_link'    => '',
+                          ],
+                        ];
+                        $pages_lists = get_theme_mod( 'pages_lists', $defaults );
+                      ?>
+                      <?php foreach($pages_lists as $pages_list): ?>
+                        <li class="footer-ul-li"><a href="<?php echo $pages_list['page_link']?>"><?php echo $pages_list['page']?></a></li>
+                      <?php endforeach ?>
                       </ul>
                     </div>                  
                   </div>
@@ -41,10 +48,18 @@
                         <hr class="footer-head-bottom">
                       </h6>
                       <ul class="footer-ul">
-                        <li class="footer-ul-li"><a href="">Project Planning</a></li>
-                        <li class="footer-ul-li"><a href="">Design & Engineering</a></li>
-                        <li class="footer-ul-li"><a href="">Project Implementation</a></li>
-                        <li class="footer-ul-li"><a href="">Post-Project Support</a></li>
+                      <?php
+                        $defaults = [
+                          [
+                            'page'         => '',
+                            'page_link'    => '',
+                          ],
+                        ];
+                        $services_lists = get_theme_mod( 'services_lists', $defaults );
+                      ?>
+                      <?php foreach($services_lists as $services_list): ?>
+                        <li class="footer-ul-li"><a href="<?php echo $services_list['page_link']?>"><?php echo $services_list['page']?></a></li>
+                      <?php endforeach ?>
                       </ul>
                     </div>
                     
@@ -55,19 +70,26 @@
                         <hr class="footer-head-bottom">
                       </h6>
                       <ul class="footer-ul">
-                        <li class="footer-ul-li"><a href="">Get quote</a></li>
-                        <li class="footer-ul-li"><a href="">Download App</a></li>
-                        <li class="footer-ul-li"><a href="">Support</a></li>
-                        <li class="footer-ul-li"><a href="">Get Advice</a></li>
+                        <?php
+                          $defaults = [
+                            [
+                              'page'         => '',
+                              'page_link'    => '',
+                            ],
+                          ];
+                          $link_lists = get_theme_mod( 'link_lists', $defaults );
+                        ?>
+                        <?php foreach($link_lists as $link_list): ?>
+                          <li class="footer-ul-li"><a href="<?php echo $link_list['page_link']?>"><?php echo $link_list['page']?></a></li>
+                        <?php endforeach ?>                        
                       </ul>
-                    </div>
-                    
+                    </div>                    
                   </div>
                 </div>
               </div>
             </div>
             <div class="footer-last">
-              <h6 class="footer-h6">Copyright © Energy Security Inc. 2021 - All Rights Reserved</h6>
+              <h6 class="footer-h6">Copyright © Energy Security Inc. <?php echo do_shortcode("[year]")?> - All Rights Reserved</h6>
               <div class="footer-social">
                 <ul class="list-group list-group-horizontal footer-bar-ul">
                   <li class="footer-bar-li-social">

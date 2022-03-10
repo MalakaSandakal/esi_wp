@@ -89,8 +89,8 @@
     new \Kirki\Section(
         'FAQ_Section',
         [
-            'title'       => esc_html__( "FAQ Section", 'kirki' ),
-            'description' => esc_html__( "FAQ Section.", 'kirki' ),
+            'title'       => esc_html__( "General FAQ Section", 'kirki' ),
+            'description' => esc_html__( "General FAQ Section.", 'kirki' ),
             'panel'       => 'Contact_Page_Panel',
             'priority'    => 140,
         ]
@@ -106,7 +106,7 @@
     new \Kirki\Field\Repeater(
         [
             'settings'     => 'faq_list',
-            'label'        => esc_html__( 'FAQ List', 'kirki' ),
+            'label'        => esc_html__( 'General FAQ List', 'kirki' ),
             'section'      => 'FAQ_Section',
             'priority'     => 150,
             'row_label'    => [
@@ -117,8 +117,40 @@
             'button_label' => esc_html__( 'Add new', 'kirki' ),
             'default'      => [
                 [
-                    'question'   => esc_html__( 'Kirki Site', 'kirki' ),
-                    'answer'   => esc_html__( 'Kirki Site', 'kirki' ),
+                    'question'   => null,
+                    'answer'   => null,
+                ],
+            ],
+            'fields'       => [
+                'question'   => [
+                    'type'        => 'text',
+                    'label'       => esc_html__( 'Question', 'kirki' ),
+                    'default'     => '',
+                ],
+                'answer'   => [
+                    'type'        => 'text',
+                    'label'       => esc_html__( 'Answer', 'kirki' ),
+                    'default'     => '',
+                ]
+            ],
+        ]
+    );
+    new \Kirki\Field\Repeater(
+        [
+            'settings'     => 'faq_list_2',
+            'label'        => esc_html__( 'Questions Asking List', 'kirki' ),
+            'section'      => 'FAQ_Section',
+            'priority'     => 160,
+            'row_label'    => [
+                'type'  => 'field',
+                'value' => esc_html__( 'Your Custom Value', 'kirki' ),
+                'field' => 'question',
+            ],
+            'button_label' => esc_html__( 'Add new', 'kirki' ),
+            'default'      => [
+                [
+                    'question'   => null,
+                    'answer'   => null,
                 ],
             ],
             'fields'       => [

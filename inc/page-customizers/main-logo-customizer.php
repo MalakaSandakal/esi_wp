@@ -3,7 +3,7 @@
     new \Kirki\Panel(
         'Logo_Panel',
         [
-            'priority'    => 1100,
+            'priority'    => 1200,
             'title'       => esc_html__( 'Main Logo', 'kirki' ),
             'description' => esc_html__( 'Main Logo Sections.', 'kirki' ),
         ]

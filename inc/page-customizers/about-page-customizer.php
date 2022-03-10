@@ -3,7 +3,7 @@
     new \Kirki\Panel(
         'About_Page_Panel',
         [
-            'priority'    => 1500,
+            'priority'    => 1400,
             'title'       => esc_html__( 'About Page', 'kirki' ),
             'description' => esc_html__( 'About Page.', 'kirki' ),
         ]

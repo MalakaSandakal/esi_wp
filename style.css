@@ -63,7 +63,9 @@ html {
 body {
 	margin: 0;
 }
-
+.label-input{
+    display: grid;
+}
 /**
  * Render the `main` element consistently in IE.
  */

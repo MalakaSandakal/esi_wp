@@ -10,7 +10,7 @@
 ?>
 <div class="single-blog">
         <div class="fixed-right">
-            <a href="contact.html"><button class="btn"><i class="fas fa-envelope"></i>CONTACT US</button></a>
+            <a href="http://esinetsolinfo.045d37c.netsolhost.com/contact/"><button class="btn"><i class="fas fa-envelope"></i>CONTACT US</button></a>
         </div>
         <div class="container">
             <div class="single-blog-container">

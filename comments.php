@@ -20,7 +20,6 @@ if ( post_password_required() ) {
 }
 ?>
 <div class="comments-section">
-    <h5 class="comment-sec-head">Post A Comment</h5>
     <?php comment_form();?>
     <div class="old-comments-sec">
         <div class="single-comment">
