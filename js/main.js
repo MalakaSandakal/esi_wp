@@ -65,7 +65,10 @@ $(document).ready(function () {
   var comment_submit_btn = document.querySelector(
     ".comment-form p.form-submit input.submit"
   );
-  comment_submit_btn.value = "Submit";
+  if(comment_submit_btn){
+    comment_submit_btn.value = "Submit";
+  }
+ 
 });
 
 var right_btn = $(".owl-carousel .owl-nav button.owl-next span");
@@ -167,30 +170,42 @@ for (let xx = 0; xx < faq_accordion_new.length; xx++) {
   }
 }
 
-function create_indicators() {
-  var a = 0;
-  do {
-    a += 1;
-    partners_carousal_indicator_sec.innerHTML += `<button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to=${
-      a - 1
-    } aria-label="Slide ${a - 1}"></button>`;
-  } while (a < products_items.length);
-  setTimeout(options__, 1000);
-}
-function options__() {
-  var cr_2 = $(".cr-2-ind-btn");
-  for (let q = 0; q < cr_2.length; q++) {
-    if (cr_2[0]) {
-      cr_2[0].classList.add("active");
-    }
+if(document.querySelector('#carouselExampleIndicators-2')){
+  function create_indicators() {
+    var a = 0;
+    do {
+      a += 1;
+      partners_carousal_indicator_sec.innerHTML += `<button type="button" class="cr-2-ind-btn" data-bs-target="#carouselExampleIndicators-2" data-bs-slide-to=${
+        a - 1
+      } aria-label="Slide ${a - 1}"></button>`;
+    } while (a < products_items.length);
+    setTimeout(options__, 1000);
   }
-  document.querySelector('#carouselExampleIndicators-2')
+  function options__() {
+    var cr_2 = $(".cr-2-ind-btn");
+    for (let q = 0; q < cr_2.length; q++) {
+      if (cr_2[0]) {
+        cr_2[0].classList.add("active");
+      }
+    }
+    document.querySelector('#carouselExampleIndicators-2');
+  }
+  setTimeout(create_indicators, 1000);
 }
-setTimeout(create_indicators, 1000);
+
+
+var tab_bar_btns = document.querySelectorAll('#main-services-tab');
+
+for(tb=0;tb<tab_bar_btns.length;tb++){
+  console.log(this.value);
+}
+
 
 var mailpoet_text = document.querySelector(".mailpoet_text");
+if(mailpoet_text){
+  mailpoet_text.placeholder = "Your Email Address Here";
+}
 
-mailpoet_text.placeholder = "Your Email Address Here";
 
 $(".mailpoet_paragraph").append(
   '<i class="fas fa-envelope input-envelope"></i>'
@@ -219,3 +234,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+

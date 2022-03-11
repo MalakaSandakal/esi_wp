@@ -250,6 +250,9 @@ require_once(get_theme_file_path('/inc/page-customizers/about-page-customizer.ph
 /*	Contact Page Customizer  */
 require_once(get_theme_file_path('/inc/page-customizers/contact-page-customizer.php'));
 
+/*  Service Page Customizer */
+require_once(get_theme_file_path( '/inc/page-customizers/services-page-customizer.php'));
+
 /*	Footer Customizer  */
 require_once(get_theme_file_path('/inc/page-customizers/footer-customizer.php'));
 

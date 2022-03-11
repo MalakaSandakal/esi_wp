@@ -1498,10 +1498,14 @@ h3.service-desc-sec-head{
     padding-left: 0px;
     padding-right: 0px;
 }
+.services-desc-sec-main .row .col-4{
+    margin-bottom: 30px;
+}
 .services-desc-sec-main .row{
     margin-top: 60px;
     padding-left: 0px;
     padding-right: 0px;
+    justify-content: center;
 }
 .services-desc-sec-main .row.image-row{
     padding-right: calc(var(--bs-gutter-x) * .5);
@@ -1560,6 +1564,9 @@ h3.service-desc-sec-head{
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    background-size:60%;
+    background-repeat:no-repeat;
+    background-position: center;
 }
 .esi-tem-row .col .card .card-body .round-sec img{
     margin-left: auto;
@@ -1583,7 +1590,9 @@ h3.service-desc-sec-head{
     text-transform: capitalize;    
     color: #000000;
     list-style: none;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 .esi-tem-row .col .card .card-body .det-sec{
     padding-top: 30px;

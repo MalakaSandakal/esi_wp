@@ -634,6 +634,7 @@
                 'product_image'   => [
                     'type'        => 'image',
                     'label'       => esc_html__( 'Image', 'kirki' ),
+                    'description' => '(Please use 600x530px images)',
                     'default'     => '#',
                 ],
                 'product_title'   => [
