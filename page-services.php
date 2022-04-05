@@ -81,7 +81,7 @@
         <div class="service-desc-sec">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services" type="button" role="tab" aria-controls="main-services" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
+              <button class="nav-link active services-tab-btn" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services" type="button" role="tab" aria-controls="main-services" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -89,7 +89,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow" type="button" role="tab" aria-controls="work-flow" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
+              <button class="nav-link services-tab-btn" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow" type="button" role="tab" aria-controls="work-flow" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -97,7 +97,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button" role="tab" aria-controls="team" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
+              <button class="nav-link services-tab-btn" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button" role="tab" aria-controls="team" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -262,7 +262,7 @@
         <div class="service-desc-sec">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-2" type="button" role="tab" aria-controls="main-services-2" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
+              <button class="nav-link active services-tab-btn" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-2" type="button" role="tab" aria-controls="main-services-2" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -270,7 +270,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-2" type="button" role="tab" aria-controls="work-flow-2" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
+              <button class="nav-link services-tab-btn" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-2" type="button" role="tab" aria-controls="work-flow-2" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -278,7 +278,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-2" type="button" role="tab" aria-controls="team-2" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
+              <button class="nav-link services-tab-btn" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-2" type="button" role="tab" aria-controls="team-2" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -496,7 +496,7 @@
       <hr>
       <div class="container service-cont-3">
         <div class="row">
-          <div class="col-md-8 service-sub-text-col">
+          <div class="col-md-10 service-sub-text-col">
             <h2 class="service-h2 service-support-team-h2">Project <span style="color: #999999;">Implementation</span>
             </h2>
             <p class="service-p service-p-2"><?php echo get_theme_mod('pi_description')?></p>
@@ -505,7 +505,7 @@
         <div class="service-desc-sec">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-3" type="button" role="tab" aria-controls="main-services-3" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
+              <button class="nav-link active services-tab-btn" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-3" type="button" role="tab" aria-controls="main-services-3" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -513,7 +513,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-3" type="button" role="tab" aria-controls="work-flow-3" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
+              <button class="nav-link services-tab-btn" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-3" type="button" role="tab" aria-controls="work-flow-3" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -521,7 +521,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-3" type="button" role="tab" aria-controls="team-3" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
+              <button class="nav-link services-tab-btn" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-3" type="button" role="tab" aria-controls="team-3" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -618,7 +618,7 @@
                               $box_20_lists_esi = get_theme_mod("pi_esi_box_1_list",$defaults);
                               ?>
                               <?php foreach ($box_20_lists_esi as $box_20_list_esi): ?>
-                                <li><?php echo $box_20_list_esi["item"]; ?></li>
+                                <li><div><?php echo $box_20_list_esi["item"]; ?></div></li>
                               <?php endforeach; ?>
                           </ul>
                         </div>
@@ -638,7 +638,7 @@
                               $box_21_lists_esi = get_theme_mod("pi_esi_box_2_list",$defaults);
                               ?>
                               <?php foreach ($box_21_lists_esi as $box_21_list_esi): ?>
-                                <li><?php echo $box_21_list_esi["item"]; ?></li>
+                                <li><div><?php echo $box_21_list_esi["item"]; ?></div></li>
                               <?php endforeach; ?>
                           </ul>
                         </div>
@@ -658,7 +658,7 @@
                               $box_22_lists_esi = get_theme_mod("pi_esi_box_3_list",$defaults);
                               ?>
                               <?php foreach ($box_22_lists_esi as $box_22_list_esi): ?>
-                                <li><?php echo $box_22_list_esi["item"]; ?></li>
+                                <li><div><?php echo $box_22_list_esi["item"]; ?></div></li>
                               <?php endforeach; ?>
                           </ul>
                         </div>
@@ -678,7 +678,7 @@
                               $box_23_lists_esi = get_theme_mod("pi_esi_box_4_list",$defaults);
                               ?>
                               <?php foreach ($box_23_lists_esi as $box_23_list_esi): ?>
-                                <li><?php echo $box_23_list_esi["item"]; ?></li>
+                                <li><div><?php echo $box_23_list_esi["item"]; ?></div></li>
                               <?php endforeach; ?>
                           </ul>
                         </div>
@@ -694,7 +694,7 @@
       <hr>
       <div class="container service-cont-3">
         <div class="row">
-          <div class="col-md-11 service-sub-text-col">
+          <div class="col-md-10 service-sub-text-col">
             <h2 class="service-h2 service-support-team-h2">Post-Project <span style="color: #999999;">Support</span>
             </h2>
             <p class="service-p service-p-2"><?php echo get_theme_mod('pps_description')?></p>
@@ -703,7 +703,7 @@
         <div class="service-desc-sec">
           <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-4" type="button" role="tab" aria-controls="main-services-4" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
+              <button class="nav-link active services-tab-btn" id="main-services-tab" data-bs-toggle="tab" data-bs-target="#main-services-4" type="button" role="tab" aria-controls="main-services-4" aria-selected="true"><h3 class="service-desc-sec-head">Main Services</h3></button>
               <div class="polygon-down">              
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -711,7 +711,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-4" type="button" role="tab" aria-controls="work-flow-4" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
+              <button class="nav-link services-tab-btn" id="work-flow-tab" data-bs-toggle="tab" data-bs-target="#work-flow-4" type="button" role="tab" aria-controls="work-flow-4" aria-selected="false"><h3 class="service-desc-sec-head">Work Flow</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -719,7 +719,7 @@
               </div>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-4" type="button" role="tab" aria-controls="team-4" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
+              <button class="nav-link services-tab-btn" id="team-tab" data-bs-toggle="tab" data-bs-target="#team-4" type="button" role="tab" aria-controls="team-4" aria-selected="false"><h3 class="service-desc-sec-head">ESI Team</h3></button>
               <div class="polygon-down">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#EDEDED" class="bi bi-chevron-down" viewBox="0 0 16 16">
                   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
@@ -808,8 +808,13 @@
                           <h4><?php echo get_theme_mod('pps_esi_box_1_heading')?></h4>
                           <div class="title-underline-green"></div>
                           <ul>
-                            <li>Project Coordinator</li>
-                            <li>Support Staff</li>
+                          <?php
+                            $defaults = [['item'   => esc_html__( 'Kirki Site', 'kirki' ),],];
+                            $pi_main_services_box_180_lists = get_theme_mod( 'pps_esi_box_1_list', $defaults );
+                          ?>
+                          <?php foreach ($pi_main_services_box_180_lists as $pi_main_services_box_180_list): ?>
+                            <li><div><?php echo $pi_main_services_box_180_list["item"]; ?></div></li>
+                          <?php endforeach; ?>
                           </ul>
                         </div>
                       </div>
@@ -823,8 +828,13 @@
                           <h4><?php echo get_theme_mod('pps_esi_box_2_heading')?></h4>
                           <div class="title-underline-green"></div>
                           <ul>
-                            <li>Project Coordinator</li>
-                            <li>Support Staff</li>
+                            <?php
+                              $defaults = [['item'   => esc_html__( 'Kirki Site', 'kirki' ),],];
+                              $pi_main_services_box_190_lists = get_theme_mod( 'pps_esi_box_2_list', $defaults );
+                            ?>
+                            <?php foreach ($pi_main_services_box_190_lists as $pi_main_services_box_190_list): ?>
+                              <li><div><?php echo $pi_main_services_box_190_list["item"]; ?></div></li>
+                            <?php endforeach; ?>
                           </ul>
                         </div>
                       </div>

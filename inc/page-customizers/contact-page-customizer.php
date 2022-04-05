@@ -41,12 +41,18 @@
             'default'      => [
                 [
                     'information'   => esc_html__( 'Kirki Site', 'kirki' ),
+                    'link'   => '',
                 ],
             ],
             'fields'       => [
                 'information'   => [
                     'type'        => 'text',
                     'label'       => esc_html__( 'Contact Detail', 'kirki' ),
+                    'default'     => '',
+                ],
+                'link'   => [
+                    'type'        => 'url',
+                    'label'       => esc_html__( 'Contact Detail URL', 'kirki' ),
                     'default'     => '',
                 ],
             ],

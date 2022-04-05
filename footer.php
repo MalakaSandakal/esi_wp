@@ -104,6 +104,9 @@
                   <li class="footer-bar-li-social">
                     <a href=""><i class="fab fa-youtube footer-bar-social"></i></a>                    
                   </li>
+                  <li class="footer-bar-li-social">
+                    <a href=""><i class="fab fa-instagram footer-bar-social"></i></a>                    
+                  </li>
                 </ul>
               </div>
               <div class="back-to-top-btn">

@@ -12,6 +12,7 @@
 					$defaults = [
 						[
 							'information'   => esc_html__( 'Kirki Site', 'kirki' ),
+              'link' => '#'
 						],
 					];
 
@@ -19,7 +20,7 @@
 					$lets_talk_list_settings = get_theme_mod( 'lets_talk_details_list', $defaults );
 				?>
 					<?php foreach ( $lets_talk_list_settings as $lets_talk_list_setting ) : ?>
-						<li><?php echo $lets_talk_list_setting['information']; ?></li>
+						<li><a href="<?php echo $lets_talk_list_setting['link']; ?>"><?php echo $lets_talk_list_setting['information']; ?></a></li>
 					<?php endforeach; ?>
                 </ul>
                 <h3 class="contact-main-heading">FOLLOW US</h3>
@@ -34,7 +35,7 @@
                     $lets_talk_social_list_settings = get_theme_mod( 'lets_talk_social_list', $defaults );
                   ?>
                 	<?php foreach ( $lets_talk_social_list_settings as $lets_talk_social_list_setting ) : ?>
-						        <li><a href="<?php echo $lets_talk_social_list_setting['link']?>"><i class="<?php echo $lets_talk_social_list_setting['icon']?>"></i></a></li>
+						        <li><a href="<?php echo $lets_talk_social_list_setting['link']?>" target="_blank"><i class="<?php echo $lets_talk_social_list_setting['icon']?>"></i></a></li>
 					        <?php endforeach; ?>
                 </ul>
             </div>

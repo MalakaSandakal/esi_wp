@@ -193,7 +193,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function ct_register_styles(){
 
 	$version = wp_get_theme()->get('version');
-	wp_enqueue_style('ct_style_bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" ,  array() , "5.1.3", "all");
+	wp_enqueue_style('ct_style_bootstrap', get_template_directory_uri()."/css/bootstrap.min.css" ,  array() , "5.1.3", "all");
 	wp_enqueue_style('ct_style_fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" ,  array() , "5.14.0", "all");
 	wp_enqueue_style('ct_style_google_fonts_api', "https://fonts.googleapis.com" ,  array() , "1", "all");
 	wp_enqueue_style('ct_style_gstatic', "https://fonts.gstatic.com" ,  array() , "1", "all");
@@ -202,6 +202,8 @@ function ct_register_styles(){
 	wp_enqueue_style('ct_style_fonts_lato', "https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;700;900&display=swap" ,  array() , "1", "all");
 	wp_enqueue_style('ct_style_owl_carousal_css', "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" ,  array() , "2.3.4", "all");
 	wp_enqueue_style('ct_style_owl_carousal_min_css', "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" ,  array() , "2.3.4", "all");
+	wp_enqueue_style('ct_custom_style_css', get_template_directory_uri()."/css/custom-css-ieg.css" ,  array() , $version, "all");
+	wp_enqueue_style('ct_all_pages_style_css', get_template_directory_uri()."/css/all-pages.css" ,  array() , $version, "all");
 	wp_enqueue_style('ct_style_css', get_template_directory_uri()."/css/style.css" ,  array() , $version, "all");
 
 }
@@ -210,11 +212,13 @@ add_action('wp_enqueue_scripts', 'ct_register_styles');
 
 // javascript
 function ct_register_javascript(){
-	wp_enqueue_script('ct-script-jquery',"https://code.jquery.com/jquery-3.6.0.min.js", array(), "3.6.0",true);
-	wp_enqueue_script('ct-script-bootstrap',"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js", array(),"5.1.3",true);
+	wp_enqueue_script('ct-script-jquery',"https://code.jquery.com/jquery-3.6.0.min.js", array(), "3.6.0",false);
+	wp_enqueue_script('ct-script-bootstrap',get_template_directory_uri()."/js/bootstrap.min.js", array(),"5.1.3",true);
 	wp_enqueue_script( 'ct-script-owl-carousal', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array() , "2.3.4", true );
 	wp_enqueue_script('ct-carousel-js', get_template_directory_uri()."/js/carousel-handler.js" , array() , "1.0", true); 
 	wp_enqueue_script('ct-testimonials-js', get_template_directory_uri()."/js/reviews-handler.js" , array() , "1.0", true); 
+	wp_enqueue_script('ct-products-js', get_template_directory_uri()."/js/products-custom.js" , array() , "1.0", true); 
+	wp_enqueue_script('ct-vid-js', get_template_directory_uri()."/js/vid.js" , array() , "1.0", true); 
 	wp_enqueue_script('ct-main-js', get_template_directory_uri()."/js/main.js" , array() , "1.0", true); 
 }
 
@@ -253,8 +257,95 @@ require_once(get_theme_file_path('/inc/page-customizers/contact-page-customizer.
 /*  Service Page Customizer */
 require_once(get_theme_file_path( '/inc/page-customizers/services-page-customizer.php'));
 
+/*  Technology Page Customizer */
+require_once(get_theme_file_path( '/inc/page-customizers/technology-page-customizer.php'));
+
+/*  IEG Page Customizer */
+require_once(get_theme_file_path( '/inc/page-customizers/ieg-page-customizer.php'));
+
 /*	Footer Customizer  */
 require_once(get_theme_file_path('/inc/page-customizers/footer-customizer.php'));
+
+
+add_action( 'wp_footer', 'my_action_javascript' ); // Write our JS below here
+
+function my_action_javascript() { ?>
+	<script type="text/javascript" >
+	jQuery(document).ready(function($) {
+
+		var page =2;
+		var post_count = jQuery('#posts-ajax').data('count');
+		var ajaxurl = '<?php echo admin_url('admin-ajax.php')?>';
+
+		jQuery('#load_more').click(function(){
+
+			var data = {
+				'action': 'my_action',
+				'page': page
+			};
+
+			console.log('before');
+
+			jQuery.post(ajaxurl, data, function(response) {
+				
+				console.log('after');
+
+				jQuery('#posts-ajax').append(response);
+				if(post_count=page){
+					jQuery('#load_more').hide();
+				}
+				page++;
+			});
+		});
+	});
+	</script> <?php
+}
+
+add_action( 'wp_ajax_my_action', 'my_action' );
+add_action("wp_ajax_nopriv_my_action" , "my_action");
+
+function my_action() {
+	
+	$sticky = get_option('sticky_posts');
+                    if($sticky){
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 9,
+                            'post__not_in' => get_option( 'sticky_posts'),
+                            'orderby' => 'date',
+                            'order' => 'DESC',
+                            'paged'=>$_POST['page']
+                        );
+                    }else{
+                        $args = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 9,
+                            'offset' => '1',
+                            'post__not_in' => get_option( 'sticky_posts'),
+                            'paged'=>$_POST['page']
+                        );
+                    }
+                    
+                $query = new WP_query($args);
+                if ($query->have_posts())
+            { ?>	
+                <?php while ($query->have_posts()):
+                    $query->the_post(); ?>
+                    <div class="col-4 single-blog-arch">
+                    <img src="<?php echo the_post_thumbnail_url()?>" alt="">
+                    <span class="post-date"><?php echo get_the_date()?></span>
+                    <a href="<?php echo get_permalink()?>">
+                    <h4 class="blog-post-heading blog-post-heading-col-4"><?php the_title()?></h4>
+                    </a>
+                    <?php the_excerpt()?>
+                    </div>
+                <?php endwhile; ?> 
+            <?php }
+
+	wp_die(); 
+}
+
+
 
 function custom_excerpt_length($excerpt) {
     if (has_excerpt()) {
@@ -263,6 +354,76 @@ function custom_excerpt_length($excerpt) {
     return $excerpt;
 }
 add_filter("the_excerpt", "custom_excerpt_length", 999);
+
+// products post
+function product_post() {
+    register_post_type('products',
+        array(
+            'labels'      => array(
+                'name'          => __('Products', 'textdomain'),
+                'singular_name' => __('Product', 'textdomain'),
+            ),
+                'public'      => true,
+                'has_archive' => true,
+				'rewrite'     => array( 'slug' => 'products' ),
+				'hierarchical' => true,
+				'supports'=>array('title','editor','thumbnail','excerpt'),
+        )
+    );
+}
+add_action('init', 'product_post');
+
+function product_taxonomy(){
+	$args = array(
+		'labels' => array(
+			'name'=>'Categories',
+			'singular_name'=>'Category',
+		),
+		'public'=>true,
+		'hierarchical' => true,
+	);
+	register_taxonomy('Categories', array('products'),$args);
+}
+add_action('init','product_taxonomy');
+
+function wporg_add_custom_box($post) {
+    $screens = [ 'products' ];
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'wporg_box_id',                 // Unique ID
+            'Product Full Title',      // Box title
+            'wporg_custom_box_html',  // Content callback, must be of type callable
+            $screen   ,
+			'side'                         // Post type
+        );
+    }
+}
+add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
+function wporg_custom_box_html( $post ) {
+	$value = get_post_meta( $post->ID, '_wporg_box_id', true );
+    ?>
+    <label for="">Description for this field</label>
+	<input type="text" name="wporg_field" value="<?php echo $value ?>" id="wporg_field" class="postbox">
+    <?php
+}
+function wporg_save_postdata( $post_id ) {
+    if ( array_key_exists( 'wporg_field', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            '_wporg_box_id',
+            $_POST['wporg_field']
+        );
+    }
+}
+add_action( 'save_post', 'wporg_save_postdata' );
+// function custom_metabox(){
+// 	add_meta_box("custom_metabox_01","Custom Metabox","custom_metabox_field","products","normal","low");
+// }
+// add_action("init","custom_metabox");
+
+// function custom_metabox_field(){
+// 	echo '<input type="number" name="id" value=""/>';
+// }
 
 // custom testimonial widget
 function register_home_widget_area()
@@ -280,7 +441,6 @@ function register_home_widget_area()
 	);
 }
 add_action('widgets_init', 'register_home_widget_area');
-
 
 function customer_testimonials_register_widget()
 {
@@ -327,8 +487,8 @@ class customer_testimonial_widget_home extends WP_Widget
                 </p>
             </div>
             <div class="col-md-5 news-read-more">
-                <a class="read-more" href=""><button class="btn wwd-btn wwd-btn-white"> Read more <i
-                            class="fas fa-angle-double-right read-more-icon read-more-icon-white"></i></button></a>
+                <a class="read-more" href="<?php echo get_permalink().'reviews'?>"><button class="btn wwd-btn wwd-btn-white"> Read more <i
+                	class="fas fa-angle-double-right read-more-icon read-more-icon-white"></i></button></a>
             </div>
         </div>
         <div class="row g-4 testomonials-card-row">
@@ -1454,11 +1614,6 @@ window.onload = function afterWebPageLoad() {
 		wp_enqueue_script('reviews', get_template_directory_uri() . '/js/reviews.js', array('jquery'), null, true);
 	}
 }
-
-
-
-
-
 
 function currentYear( $atts ){
     return date('Y');

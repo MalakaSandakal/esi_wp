@@ -33,10 +33,14 @@
           <div class="top-contact">
             <ul class="list-group list-group-horizontal top-bar-ul">            
               <li class="top-bar-li">
-                <i class="fas fa-phone-alt top-bar-icon"></i><?php echo get_theme_mod('telephone_number')?>
+                <i class="fas fa-phone-alt top-bar-icon"></i>
+                <a href="tel:4083534374"><?php echo get_theme_mod('telephone_number')?></a>
               </li>
               <li class="top-bar-li">
-                <i class="fas fa-envelope top-bar-icon"></i><?php echo get_theme_mod('contact_mail')?>
+                <i class="fas fa-envelope top-bar-icon"></i>
+                <a href="mailto:info@energysecurity.com">
+                  <?php echo get_theme_mod('contact_mail')?>
+                </a>
               </li>
             </ul>
           </div>

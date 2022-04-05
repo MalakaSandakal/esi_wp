@@ -199,107 +199,7 @@
     );
     // end : News & Blogs Section
 
-    // begin : Customer Testimonials
-    new \Kirki\Section(
-        'Customer_Testimonials_Section',
-        [
-            'title'       => esc_html__( 'Customer Testimonials Section', 'kirki' ),
-            'description' => esc_html__( 'Customer Testimonials Section.', 'kirki' ),
-            'panel'       => 'Homepage_Panel',
-            'priority'    => 140,
-        ]
-    );
-    new \Kirki\Field\Textarea(
-        [
-            'settings'    => 'customer_testimonials_description',
-            'label'       => esc_html__( 'Customer Testimonials Description', 'kirki' ),
-            'section'     => 'Customer_Testimonials_Section',
-            'default'     => esc_html__( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,', 'kirki' ),
-        ]
-    );
-    new \Kirki\Field\Repeater(
-        [
-            'settings'     => 'testimonial_setting',
-            'label'        => esc_html__( 'Single Testimonial', 'kirki' ),
-            'section'      => 'Customer_Testimonials_Section',
-            'priority'     => 300,
-            'row_label'    => [
-                'type'  => 'field',
-                'value' => esc_html__( 'Customer Name', 'kirki' ),
-                'field' => 'customer_name',
-            ],
-            'button_label' => esc_html__( 'Add new testimonial', 'kirki' ),
-            'default'      => [
-                [
-                    'preview_image'   => esc_html__( 'Kirki Site', 'kirki' ),
-                    'profile_image'   => esc_html__( 'Kirki Site', 'kirki' ), 
-                    'customer_name'   => esc_html__( 'Kirki Site', 'kirki' ),                      
-                    'customer_feeling'   => esc_html__( 'Kirki Site', 'kirki' ),  
-                    'customer_comment'   => esc_html__( 'Kirki Site', 'kirki' ),                      
-                ],
-            ],
-            'fields'       => [
-                'preview_image'   => [
-                    'type'        => 'image',
-                    'label'       => esc_html__( 'Preview Image', 'kirki' ),
-                    'default'     => '',
-                ],
-                'slider_img_1'   => [
-                    'type'        => 'image',
-                    'label'       => esc_html__( 'Slider Image 1', 'kirki' ),
-                    'default'     => '',
-                ],
-                'slider_img_2'   => [
-                    'type'        => 'image',
-                    'label'       => esc_html__( 'Slider Image 2', 'kirki' ),
-                    'default'     => '',
-                ],
-                'slider_img_3'   => [
-                    'type'        => 'image',
-                    'label'       => esc_html__( 'Slider Image 3', 'kirki' ),
-                    'default'     => '',
-                ],
-                'profile_image'   => [
-                    'type'        => 'image',
-                    'label'       => esc_html__( 'Customer Profile Image', 'kirki' ),
-                    'default'     => '',
-                ],
-                'customer_name'   => [
-                    'type'        => 'text',
-                    'label'       => esc_html__( "Customer's Name", 'kirki' ),
-                    'default'     => '',
-                ],
-                'customer_feeling'   => [
-                    'type'        => 'text',
-                    'label'       => esc_html__( "Customer's Idea", 'kirki' ),
-                    'default'     => '',
-                ],
-                'project_scope_list_1'   => [
-                    'type'        => 'text',
-                    'label'       => esc_html__( "Project Scope List 1", 'kirki' ),
-                    'default'     => '',
-                ],
-                'project_scope_list_2'   => [
-                    'type'        => 'text',
-                    'label'       => esc_html__( "Project Scope List 2", 'kirki' ),
-                    'default'     => '',
-                ],
-                'project_scope_list_3'   => [
-                    'type'        => 'text',
-                    'label'       => esc_html__( "Project Scope List 3", 'kirki' ),
-                    'default'     => '',
-                ],
-
-                'customer_comment'   => [
-                    'type'        => 'textarea',
-                    'label'       => esc_html__( "Customer's Comment", 'kirki' ),
-                    'default'     => '',
-                ],
-            ],
-        ]
-    );
-    // end : Customer Testimonials
-
+    
     // begin : Partners Section
     new \Kirki\Section(
         'Partners_Section',
@@ -368,8 +268,55 @@
     );
     new \Kirki\Field\Image(
         [
-            'settings'    => 'slider_image_1',
+            'settings'    => 'slider_image_0',
             'label'       => esc_html__( 'Slider Image 1', 'kirki' ),
+            'description' => '(Please use 1920x700px images)',
+            'section'     => 'Main_Slider_Section',
+            'default'     => '',
+            'priority' => 2,
+        ]
+    );
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'slider_heading_0',
+            'label'    => esc_html__( 'Slider 1 Main Heading', 'kirki' ),
+            'section'  => 'Main_Slider_Section',
+            'default'  => esc_html__( 'This is a default value', 'kirki' ),
+            'priority' => 3,
+        ]
+    );
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'slider_sub_heading_0',
+            'label'    => esc_html__( 'Slider 1 Sub Heading', 'kirki' ),
+            'section'  => 'Main_Slider_Section',
+            'default'  => esc_html__( 'This is a default value', 'kirki' ),
+            'priority' => 4,
+        ]
+    );
+    
+    new \Kirki\Field\Textarea(
+        [
+            'settings' => 'box_heading_0',
+            'label'    => esc_html__( 'Secondary Box Heading 1', 'kirki' ),
+            'section'  => 'Main_Slider_Section',
+            'default'  => esc_html__( 'This is a default value', 'kirki' ),
+            'priority' => 5,
+        ]
+    );
+    new \Kirki\Field\Textarea(
+        [
+            'settings' => 'box_description_0',
+            'label'    => esc_html__( 'Secondary Box Description 1', 'kirki' ),
+            'section'  => 'Main_Slider_Section',
+            'default'  => esc_html__( 'This is a default value', 'kirki' ),
+            'priority' => 6,
+        ]
+    );
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'slider_image_1',
+            'label'       => esc_html__( 'Slider Image 2', 'kirki' ),
             'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
@@ -378,7 +325,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_heading_1',
-            'label'    => esc_html__( 'Slider 1 Main Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 2 Main Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 10,
@@ -387,7 +334,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_sub_heading_1',
-            'label'    => esc_html__( 'Slider 1 Sub Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 2 Sub Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 11,
@@ -396,7 +343,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_heading_1',
-            'label'    => esc_html__( 'Secondary Box Heading 1', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Heading 2', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 13,
@@ -405,7 +352,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_description_1',
-            'label'    => esc_html__( 'Secondary Box Description 1', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Description 2', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 13,
@@ -416,7 +363,7 @@
     new \Kirki\Field\Image(
         [
             'settings'    => 'slider_image_2',
-            'label'       => esc_html__( 'Slider Image 2', 'kirki' ),
+            'label'       => esc_html__( 'Slider Image 3', 'kirki' ),
             'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
@@ -426,7 +373,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_heading_2',
-            'label'    => esc_html__( 'Slider 2 Main Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 3 Main Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 20,
@@ -435,7 +382,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_sub_heading_2',
-            'label'    => esc_html__( 'Slider 2 Sub Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 3 Sub Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 21,
@@ -444,7 +391,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_heading_2',
-            'label'    => esc_html__( 'Secondary Box Heading 2', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Heading 3', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 22,
@@ -453,7 +400,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_description_2',
-            'label'    => esc_html__( 'Secondary Box Description 2', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Description 3', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 23,
@@ -464,7 +411,7 @@
     new \Kirki\Field\Image(
         [
             'settings'    => 'slider_image_3',
-            'label'       => esc_html__( 'Slider Image 3', 'kirki' ),
+            'label'       => esc_html__( 'Slider Image 4', 'kirki' ),
             'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
@@ -474,7 +421,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_heading_3',
-            'label'    => esc_html__( 'Slider 3 Main Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 4 Main Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 30,
@@ -483,7 +430,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_sub_heading_3',
-            'label'    => esc_html__( 'Slider 3 Sub Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 4 Sub Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 31,
@@ -492,7 +439,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_heading_3',
-            'label'    => esc_html__( 'Secondary Box Heading 3', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Heading 4', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 32,
@@ -501,7 +448,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_description_3',
-            'label'    => esc_html__( 'Secondary Box Description 3', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Description 4', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 33,
@@ -511,7 +458,7 @@
     new \Kirki\Field\Image(
         [
             'settings'    => 'slider_image_4',
-            'label'       => esc_html__( 'Slider Image 4', 'kirki' ),
+            'label'       => esc_html__( 'Slider Image 5', 'kirki' ),
             'description' => '(Please use 1920x700px images)',
             'section'     => 'Main_Slider_Section',
             'default'     => '',
@@ -521,7 +468,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_heading_4',
-            'label'    => esc_html__( 'Slider 4 Main Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 5 Main Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 40,
@@ -530,7 +477,7 @@
     new \Kirki\Field\Text(
         [
             'settings' => 'slider_sub_heading_4',
-            'label'    => esc_html__( 'Slider 4 Sub Heading', 'kirki' ),
+            'label'    => esc_html__( 'Slider 5 Sub Heading', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 41,
@@ -539,7 +486,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_heading_4',
-            'label'    => esc_html__( 'Secondary Box Heading 4', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Heading 5', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 42,
@@ -548,7 +495,7 @@
     new \Kirki\Field\Textarea(
         [
             'settings' => 'box_description_4',
-            'label'    => esc_html__( 'Secondary Box Description 4', 'kirki' ),
+            'label'    => esc_html__( 'Secondary Box Description 5', 'kirki' ),
             'section'  => 'Main_Slider_Section',
             'default'  => esc_html__( 'This is a default value', 'kirki' ),
             'priority' => 43,
@@ -672,22 +619,10 @@
                     'label'       => esc_html__( 'Enable Product Specification button', 'kirki' ),
                     'default'     => 'true',
                 ],
-                'product_specifications_url'   => [
-                    'type'        => 'url',
-                    'label'       => esc_html__( ' Product specifications link', 'kirki' ),
-                    'default'     => '#',
-                    'priority'    => 300,
-                ],
                 'ask_a_pro_btn_control'   => [
                     'type'        => 'checkbox',
                     'label'       => esc_html__( 'Enable Ask A Pro button', 'kirki' ),
                     'default'     => 'true',
-                ],
-                'ask_a_pro_url'   => [
-                    'type'        => 'url',
-                    'label'       => esc_html__( ' Ask a pro link', 'kirki' ),
-                    'default'     => '#',
-                    'priority'    => 350,
                 ],
             ],
         ]

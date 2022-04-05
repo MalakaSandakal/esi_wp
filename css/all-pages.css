@@ -1,0 +1,125 @@
+.technology-start {
+    margin-top: 65px;
+}
+.left-side-custom-padding {
+    padding-right: 60px;
+}
+.technology-start .sub-title-lasi {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    float: left;
+    width: 100%;
+    line-height: 33px;
+    margin-top: 40px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    color: #253745;
+}
+.technology-start p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    color: #828282;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+}
+.technology-start .user-33 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    float: left;
+    width: 100%;
+    color: #828282;
+    margin-bottom: 20px;
+}
+.technology-start .green-bold {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #31c46c;
+}
+.link-to-ieg {
+    float: left;
+    margin-top: 40px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.055em;
+    text-transform: capitalize;
+    color: #072126;
+}
+.link-to-ieg:hover {
+    color: #31c46c;
+}
+.right-side-info-lasi img {
+    float: left;
+    width: 100%;
+    object-fit: contain;
+}
+.right-side-info-lasi .gree-bg-link {
+    float: right;
+    margin: 40px 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 40px;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    background: #31c46c;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ffffff;
+}
+@media(max-width:1400px){
+    .bottom-content-ieg .link-menu ul li{
+        width: 25%;
+        border-bottom: 1px solid #ededed;
+    }
+}
+
+@media(max-width:991px){
+    .left-side-custom-padding {
+        padding-right: 0px;
+    }
+    .bottom-content-ieg .main-title-ieg{
+        font-size: 55px;
+        line-height: 55px;
+    }
+    .bottom-content-ieg .main-title-ieg {
+        font-size: 50px;
+        line-height: 55px;
+    }
+}
+@media(max-width:767px){
+    .bottom-content-ieg .link-menu ul li{
+        width: 50%;
+    }
+}
+
+@media(max-width:580px){
+    .left-side-custom-padding h2{
+       font-size: 42px;
+    }
+}

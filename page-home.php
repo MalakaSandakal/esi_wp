@@ -3,7 +3,39 @@ get_header(); ?>
 <section>
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item carousel-item-cr-1 active">
+        <div class="carousel-item carousel-item-cr-1 active">
+                <div class="main-cr-shadow"></div>
+                <div class="container">
+                    <div class="col-md-8">
+                        <div class="main-carousal-text">
+                            <h1 class="home-h1"><?php echo get_theme_mod(
+                                "slider_heading_0"
+                            ); ?>
+                            </h1>
+                            <h5 class="home-main-h5"> <?php echo get_theme_mod(
+                                "slider_sub_heading_0"
+                            ); ?> </h5>
+                            <div class="col-md-8">
+                                <button class="btn play-btn-main-cr" data-bs-toggle="modal" data-bs-target="#vid-area">
+                                    <div class="play-btn-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </button>
+                                <br>
+                                
+                                <a href="<?php echo get_theme_mod('ask_a_pro_link')?>">
+                                    <button class="btn ask-pro"><i class="fas fa-phone-alt main-cr-icon"></i> ASK A PRO
+                                    </button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+                <img src="<?php echo get_theme_mod(
+                    "slider_image_0"
+                ); ?>" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item carousel-item-cr-1">
                 <div class="main-cr-shadow"></div>
                 <div class="container">
                     <div class="col-md-8">
@@ -138,6 +170,8 @@ get_header(); ?>
                         aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                         aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
                 </div>
             </div>
         </div>
@@ -154,7 +188,7 @@ get_header(); ?>
     </div>
             
     <!-- Modal -->
-    <div class="modal fade" id="vid-area" tabindex="-1" aria-labelledby="vid-area-label" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal fade modal-vid-area" id="vid-area" tabindex="-1" aria-labelledby="vid-area-label" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered modal-xl">
             <div class="modal-content">
             <div class="modal-header">
@@ -189,11 +223,24 @@ get_header(); ?>
     
 </section>
 <section class="home-second-sec">
-    <div class="container">
+    <div class="container-fluid box-cf">
         <div class="row gx-4">
-            <div class="col-md-3">
+            <div class="col">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1">
+                    aria-current="true" aria-label="Slide 0">
+                    <div class="home-main-card">
+                        <h3 class="home-main-card-h3"><?php echo get_theme_mod(
+                            "box_heading_0"
+                        ); ?></h3>
+                        <p class="home-main-card-p"><?php echo get_theme_mod(
+                            "box_description_0"
+                        ); ?></p>
+                    </div>
+                </button>
+            </div>
+            <div class="col">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 1">
                     <div class="home-main-card">
                         <h3 class="home-main-card-h3"><?php echo get_theme_mod(
                             "box_heading_1"
@@ -204,8 +251,8 @@ get_header(); ?>
                     </div>
                 </button>
             </div>
-            <div class="col-md-3">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            <div class="col">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 2">
                     <div class="home-main-card">
                         <h3 class="home-main-card-h3"><?php echo get_theme_mod(
@@ -217,8 +264,8 @@ get_header(); ?>
                     </div>
                 </button>
             </div>
-            <div class="col-md-3">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            <div class="col">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
                     aria-label="Slide 3">
                     <div class="home-main-card">
                         <h3 class="home-main-card-h3"><?php echo get_theme_mod(
@@ -230,8 +277,8 @@ get_header(); ?>
                     </div>
                 </button>
             </div>
-            <div class="col-md-3">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            <div class="col">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
                     aria-label="Slide 4">
                     <div class="home-main-card">
                         <h3 class="home-main-card-h3"><?php echo get_theme_mod(
@@ -278,6 +325,83 @@ get_header(); ?>
             </div>
         </div>
         <div class="row wwdd-img-row">
+            <!-- <div class="col-md-12">
+            <div id="what-we-do-carousal" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Problem: Ignoring thermal energy needs</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum rem ipsum quaerat et porro sit aut vitae sequi explicabo ipsam nesciunt soluta optio, voluptatum perferendis, nostrum magni dignissimos? Eveniet, ab.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>ESI’s solution:</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius pariatur provident libero dicta modi beatae, quo ullam accusantium quisquam impedit dolorum aliquid perferendis, quasi unde minus quod neque, magnam alias?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Problem: Ignoring thermal energy needs</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum rem ipsum quaerat et porro sit aut vitae sequi explicabo ipsam nesciunt soluta optio, voluptatum perferendis, nostrum magni dignissimos? Eveniet, ab.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>ESI’s solution:</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius pariatur provident libero dicta modi beatae, quo ullam accusantium quisquam impedit dolorum aliquid perferendis, quasi unde minus quod neque, magnam alias?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing</p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Problem: Ignoring thermal energy needs</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum rem ipsum quaerat et porro sit aut vitae sequi explicabo ipsam nesciunt soluta optio, voluptatum perferendis, nostrum magni dignissimos? Eveniet, ab.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>ESI’s solution:</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius pariatur provident libero dicta modi beatae, quo ullam accusantium quisquam impedit dolorum aliquid perferendis, quasi unde minus quod neque, magnam alias?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#what-we-do-carousal" data-bs-slide="prev">
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#what-we-do-carousal" data-bs-slide="next">
+                        <i class="fas fa-chevron-right"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div> -->
             <div class="col-md-12 text-center wwdd-img-col">
                 <img src="<?php echo get_theme_mod(
                     "what_we_do_section_image"
@@ -388,9 +512,7 @@ get_header(); ?>
                                             "product_specification_btn_control"
                                         ]
                                     ): ?>                                    
-                                        <button class="btn wwd-btn os-btn"><a href="<?php echo $product_setting[
-                                            "product_specifications_url"
-                                        ]; ?>"> Product Specifications </a><img src="<?php echo get_template_directory_uri() .
+                                        <button class="btn wwd-btn os-btn"><a href="<?php echo get_template_directory_uri().'/ESI Matrix.zip'?>" download="ESI Matrix.zip"> Product Specifications </a><img src="<?php echo get_template_directory_uri() .
     "/images/Vector (4).png"; ?>" alt="" class="download-icon"></button>  
                                     <?php else: ?>                                    
                                     <?php endif; ?>
@@ -487,9 +609,9 @@ get_header(); ?>
               as $partner_carousal_setting
           ): ?>
             <div class="item">
-                <div class="company-block"><img src="<?php echo $partner_carousal_setting[
+                <div class="company-block"><a href=""><img src="<?php echo $partner_carousal_setting[
                     "image"
-                ]; ?>" alt=""></div>
+                ]; ?>" alt=""></a></div>
             </div>
           <?php endforeach; ?>
         </div>
